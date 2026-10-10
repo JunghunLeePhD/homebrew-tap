@@ -1,9 +1,9 @@
 cask "jumpchamp" do
   arch arm: "arm64", intel: "intel-x86_64"
 
-  version "1.0.0"
-  sha256 arm:   "5294e4dd82ed8288883d072654f9de5216871317f4023759597cfc8b38b6fd7c",
-         intel: "013f42f76e0c5d4d07190816c02d02654f5d0a19f177a18cd8015707a4b8a211"
+  version "1.0.1"
+  sha256 arm:   "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+         intel: "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
   url "https://github.com/JunghunLeePhD/jumpchamp/releases/download/v#{version}/JumpChamp-macos-#{arch}.app.zip"
   name "JumpChamp"

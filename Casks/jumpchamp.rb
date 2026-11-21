@@ -15,6 +15,8 @@ cask "jumpchamp" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "JumpChamp.app"
 
   postflight_steps do

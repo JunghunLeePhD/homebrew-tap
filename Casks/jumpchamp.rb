@@ -4,8 +4,8 @@ cask "jumpchamp" do
   sha256 arm:   "4e8e0448c4e01348b11a206cf4963645d4f3425bd99b3e884070e37614f54a1d",
          intel: "2f8e767c010dab275a08edd1ffe2d6a69dbbaff575a97b0f38860a129f34c813"
 
-  url "https://github.com/JunghunLeePhD/jumpchamp/releases/download/v#{version}/JumpChamp-macos-#{arch}.app.zip"
-  name "JumpChamp"
+  url "https://github.com/JunghunLeePhD/jumpchamp/releases/download/v#{version}/JumpChamp-macos-#{arch}.app.zip"                    
+  name "JumpChamp"                                                                                                                  
   desc "High-performance prime gap distribution explorer and analyzer"
   homepage "https://github.com/JunghunLeePhD/jumpchamp"
 
@@ -16,9 +16,9 @@ cask "jumpchamp" do
 
   app "JumpChamp.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/JumpChamp.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-cr", "{{appdir}}/JumpChamp.app"]
   end
 
   zap trash: [
